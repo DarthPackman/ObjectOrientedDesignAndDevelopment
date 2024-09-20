@@ -6,9 +6,10 @@ Hero::Hero(std::string name, unsigned health, unsigned strength, unsigned dexter
     mHealth(health),
     mStrength(strength),
     mDexterity(dexterity),
-    mDefense(defense) {
-    std::cout << "hero " << mName << " is constructed" << std::endl;
-}
+    mDefense(defense) 
+    {
+        std::cout << "hero " << mName << " is constructed" << std::endl;
+    }
 
 /*  @   show status of a hero including:
 *           -name
@@ -20,6 +21,7 @@ void Hero::showStatus() {
     cout << "Strength:" << mStrength;
     cout << "Dexterity:" << mDexterity;
     cout << "Defense:" << mDefense;
+    
 }
 
 bool Hero::isDead() {
@@ -36,6 +38,20 @@ bool Hero::isDead() {
 *       Note: if health == 0, the hero dies
 */
 void Hero::attackedBy(Hero& hero) {
+    int damage = hero.mStrength * hero.mDexterity - mDexterity * mDefense;
+    if (damage < 0) {
+        damage = 0;
+    }
+    
+    if (damage > mHealth) {
+        damage = mHealth;
+    }
+    mHealth -= damage;
+    if (mHealth < 0) {
+        mHealth = 0;
+    }
+    cout << mName << " is attacked by " << hero.mName << " with damage " << damage << endl;
+    cout << mName << " has " << mHealth << " health left" << endl;
 }
 
 Hero::~Hero() {
