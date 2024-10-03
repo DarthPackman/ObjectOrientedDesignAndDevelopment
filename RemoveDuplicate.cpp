@@ -9,7 +9,21 @@ using namespace std;
 
 string removeDuplicates(const string& input) {
     string result = "";
-    // @: Implement the fuction here
+    // Iterate over the input string
+    for (int i = 0; i < input.length(); i++) {
+        bool duplicate = false;
+        // Check if the current character is already in the result string
+        for (int j = 0; j < result.length(); j++) {
+            if (input[i] == result[j]) {
+                duplicate = true;
+                break;
+            }
+        }
+        // If the character is not a duplicate, add it to the result string
+        if (!duplicate) {
+            result += input[i];
+        }
+    }
     return result;
 }
 

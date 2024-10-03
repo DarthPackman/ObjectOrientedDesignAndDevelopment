@@ -10,7 +10,15 @@ using namespace std;
 
 string insertInMiddle(const string& baseString, const string& insertString) {
     string result = baseString;
-    // @: Implement the function here
+    // Calculate the middle index of the base string
+    int middleIndex = baseString.length() / 2;
+    // Check if the base string has an odd number of characters
+    if (baseString.length() % 2 != 0) {
+        // If the base string has an odd number of characters, repeat the middle character
+        result.insert(middleIndex, 1, baseString[middleIndex]);
+    }
+    // Insert the insert string in the middle of the base string
+    result.insert(middleIndex, insertString);
     return result;
 }
 
