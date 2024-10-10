@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Packm\OneDrive\Documents\GitHub\ObjectOrientedDesignAndDevelopment\build\CMakeFiles\40f62d45f9a89d66d8ae546b088ba768\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F11B0BAD-0599-3200-9E74-1A88392E70CC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
